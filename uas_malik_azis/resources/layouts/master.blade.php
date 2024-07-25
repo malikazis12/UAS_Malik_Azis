@@ -194,7 +194,7 @@
             <a href="/dashboard/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                oi
 
               </p>
             </a>
@@ -204,7 +204,7 @@
             <a href="/mahasiswa/" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Mahasiswa
+                oi
 
               </p>
             </a>
