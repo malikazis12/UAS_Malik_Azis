@@ -16,10 +16,10 @@ use App\Http\Controllers\PasienController;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('master');
 // });
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
