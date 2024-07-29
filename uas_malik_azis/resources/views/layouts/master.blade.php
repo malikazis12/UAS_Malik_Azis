@@ -201,10 +201,10 @@
           </li>
 
           <li class="nav-item">
-            <a href="/mahasiswa/" class="nav-link">
+            <a href="/pasien/" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Mahasiswa
+                Pasien
 
               </p>
             </a>
