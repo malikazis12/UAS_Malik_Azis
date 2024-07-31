@@ -1,6 +1,6 @@
 @extends('layouts.master')
-@section('title','Data Mahasiswa')
-@section('judul','Data Mahasiswa')
+@section('title','Data Pasien')
+@section('judul','Data Pasien')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -53,7 +53,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-        <a href="/mahasiswa/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+        <a href="/pasien/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -69,19 +69,21 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nim</th>
-                        <th>Nama Lengkap</th>
-                        <th>Jurusan</th>
+                        <th>No Pasien</th>
+                        <th>Nama Pasien</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Alamat</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($mhs as $item)
+                    @forelse ($pasien as $item)
                         <tr>
                             <td>{{$nomor++}}</td>
-                            <td>{{$item->nim}}</td>
-                            <td>{{$item->nama}}</td>
-                            <td>{{$item->jurusans->kode}} - {{$item->jurusans->jurusan}}</td>
+                            <td>{{$item->nomorpasien}}</td>
+                            <td>{{$item->namapasien}}</td>
+                            <td>{{$item->tanggallahir}}</td>
+                            <td>{{$item->alamat}}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                                     <i class="fa fa-eye"></i>
@@ -100,32 +102,36 @@
 
                                                 <tbody>
                                                         <tr>
-                                                            <td>NIM</td>
-                                                            <th scope="row">{{$item->nim}}</th>
+                                                            <td>Nomor BPJS</td>
+                                                            <th scope="row">{{$item->no_bpjs}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Nama</td>
-                                                            <th scope="row">{{$item->nama}}</th>
+                                                            <td>Nomor KTP</td>
+                                                            <th scope="row">{{$item->no_ktp}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Tempat</td>
-                                                            <th scope="row">{{$item->tempat}}</th>
+                                                            <td>Nomor Pasien</td>
+                                                            <th scope="row">{{$item->no_pasien}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Tanggal</td>
-                                                            <th scope="row">{{$item->tanggal}}</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alamat</td>
-                                                            <th scope="row">{{$item->alamat}}</th>
+                                                            <td>Nama Pasien</td>
+                                                            <th scope="row">{{$item->nama_pasien}}</th>
                                                         </tr>
                                                         <tr>
                                                             <td>Jenis Kelamin</td>
                                                             <th scope="row">{{$item->jk}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Agama</td>
-                                                            <th scope="row">{{$item->agama}}</th>
+                                                            <td>Tanggal Lahir</td>
+                                                            <th scope="row">{{$item->tanggal_lahir}}</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Handphone</td>
+                                                            <th scope="row">{{$item->hp}}</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Alamat</td>
+                                                            <th scope="row">{{$item->alamat_pasien}}</th>
                                                         </tr>
                                                         <tr>
                                                             <td>Foto</td>
@@ -143,7 +149,7 @@
                                     </div>
                                     </div>
                                 </div>
-                                <a href="/mahasiswa/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
+                                <a href="/pasien/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                     <i class="fa fa-trash"></i>
@@ -162,7 +168,7 @@
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                        <form action="/mahasiswa/{{$item->id}}" method="post">
+                                        <form action="/pasien/{{$item->id}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-primary">Hapus</button>
@@ -190,4 +196,3 @@
         <!-- /.card-footer-->
     </div>
 @endsection
-
