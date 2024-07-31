@@ -212,10 +212,10 @@
 
 
           <li class="nav-item">
-            <a href="/jurusan/" class="nav-link">
+            <a href="/rekammedis/" class="nav-link">
               <i class="nav-icon fas fa-building"></i>
               <p>
-                Jurusan
+                Rekam Medis
               </p>
             </a>
           </li>
