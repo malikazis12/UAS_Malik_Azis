@@ -179,7 +179,7 @@
           <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          {{-- <a href="#" class="d-block">{{ Auth::user()->name }}</a> --}}
         </div>
       </div>
 
@@ -210,7 +210,7 @@
             </a>
           </li>
 
-          @if (Auth::user()->akses =="admin")
+
           <li class="nav-item">
             <a href="/jurusan/" class="nav-link">
               <i class="nav-icon fas fa-building"></i>
@@ -219,7 +219,7 @@
               </p>
             </a>
           </li>
-          @endif
+
 
         </ul>
       </nav>

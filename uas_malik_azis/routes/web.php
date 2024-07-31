@@ -27,3 +27,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 //Data Pasien
 Route::get('/pasien/', [PasienController::class, 'index']);
 Route::get('/pasien/form/', [PasienController::class, 'create']);
+Route::post('/pasien/store/', [PasienController::class, 'store']);
+Route::get('/pasien/edit/{id}', [PasienController::class, 'edit']);
+Route::put('/pasien/{id}', [PasienController::class, 'update']);
+Route::delete('/pasien/{id}', [PasienController::class, 'destroy']);

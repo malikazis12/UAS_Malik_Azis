@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('no_bpjs');
             $table->string('no_ktp');
-            $table->date('no_pasien');
+            $table->string('no_pasien');
             $table->string('nama_pasien');
+            $table->string('jk');
             $table->string('tanggal_lahir');
             $table->bigInteger('hp');
             $table->string('alamat_pasien');
+            $table->string('password');
             $table->timestamps();
 
         });

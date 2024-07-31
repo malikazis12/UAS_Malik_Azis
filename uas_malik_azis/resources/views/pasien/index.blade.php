@@ -80,10 +80,10 @@
                     @forelse ($pasien as $item)
                         <tr>
                             <td>{{$nomor++}}</td>
-                            <td>{{$item->nomorpasien}}</td>
-                            <td>{{$item->namapasien}}</td>
-                            <td>{{$item->tanggallahir}}</td>
-                            <td>{{$item->alamat}}</td>
+                            <td>{{$item->no_pasien}}</td>
+                            <td>{{$item->nama_pasien}}</td>
+                            <td>{{$item->tanggal_lahir}}</td>
+                            <td>{{$item->alamat_pasien}}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                                     <i class="fa fa-eye"></i>
@@ -132,10 +132,6 @@
                                                         <tr>
                                                             <td>Alamat</td>
                                                             <th scope="row">{{$item->alamat_pasien}}</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Foto</td>
-                                                            <th scope="row"><img src="{{ asset('/foto/'.$item->foto) }}" width="100" alt=""></th>
                                                         </tr>
 
 
