@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PasienController;
+use App\Http\Controllers\RekamMedisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,6 @@ Route::post('/pasien/store/', [PasienController::class, 'store']);
 Route::get('/pasien/edit/{id}', [PasienController::class, 'edit']);
 Route::put('/pasien/{id}', [PasienController::class, 'update']);
 Route::delete('/pasien/{id}', [PasienController::class, 'destroy']);
+
+//Data Rekam Medis
+Route::get('/rekammedis/', [RekamMedisController::class, 'index']);
