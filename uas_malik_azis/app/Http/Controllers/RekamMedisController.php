@@ -44,4 +44,49 @@ class RekamMedisController extends Controller
 
         return redirect('/rekammedis/');
     }
+
+        /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        $rekammedis = Rekammedis::find($id);
+        return view('rekammedis.edit',compact('rekammedis'));
+    }
+
+        /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        $rekammedis = Rekammedis::find($id);
+        $rekammedis->No_Pasien = $request->No_Pasien;
+        $rekammedis->keluhan = $request->keluhan;
+        $rekammedis->diagnosa = $request->diagnosa;
+        $rekammedis->tanggal_periksa = $request->tanggal_periksa;
+        $rekammedis->jam_periksa = $request->jam_periksa;
+        $rekammedis->status = $request->status;
+        $rekammedis->save();
+
+        return redirect('/rekammedis/');
+    }
+
+        /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        $rekammedis = Rekammedis::find($id);
+        $rekammedis->delete();
+
+        return redirect('/rekammedis/');
+    }
 }
