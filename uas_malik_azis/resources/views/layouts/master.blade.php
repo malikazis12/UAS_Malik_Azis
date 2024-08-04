@@ -201,6 +201,15 @@
           </li>
 
           <li class="nav-item">
+            <a href="/petugas/" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
+              <p>
+                Petugas
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="/pasien/" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
@@ -219,6 +228,7 @@
               </p>
             </a>
           </li>
+
 
 
         </ul>

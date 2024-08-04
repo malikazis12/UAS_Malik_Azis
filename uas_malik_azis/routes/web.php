@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\RekamMedisController;
+use App\Http\Controllers\PetugasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,11 @@ Route::post('/rekammedis/store/', [RekamMedisController::class, 'store']);
 Route::get('/rekammedis/edit/{id}', [RekamMedisController::class, 'edit']);
 Route::put('/rekammedis/{id}', [RekamMedisController::class, 'update']);
 Route::delete('/rekammedis/{id}', [RekamMedisController::class, 'destroy']);
+
+//Data Petugas
+Route::get('/petugas/', [PetugasController::class, 'index']);
+Route::get('/petugas/form/', [PetugasController::class, 'create']);
+Route::post('/petugas/store/', [PetugasController::class, 'store']);
+Route::get('/petugas/edit/{id}', [PetugasController::class, 'edit']);
+Route::put('/petugas/{id}', [PetugasController::class, 'update']);
+Route::delete('/petugas/{id}', [PetugasController::class, 'destroy']);
