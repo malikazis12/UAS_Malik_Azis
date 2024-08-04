@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data Pasien')
-@section('judul','Data Pasien')
+@section('title','Data Rekam Medis')
+@section('judul','Data Rekam Medis')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active">Data Jurusan</li>
+    <li class="breadcrumb-item active">Data Rekam Medis</li>
   </ol>
 @endsection
 
