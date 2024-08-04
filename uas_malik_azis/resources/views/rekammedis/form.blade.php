@@ -27,48 +27,44 @@
             <form method="post" action="/rekammedis/store/" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">Nomor BPJS</label>
-                    <input type="text" class="form-control" name="no_bpjs">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Nomor KTP</label>
-                    <input type="text" class="form-control" name="no_ktp">
-                </div>
-                <div class="mb-3">
                     <label class="form-label">Nomor Pasien</label>
                     <input type="text" class="form-control" name="no_pasien">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Nama Pasien</label>
-                    <input type="text" class="form-control" name="nama_pasien">
+                    <label class="form-label">Keluhan</label>
+                    <input type="text" class="form-control" name="keluhan">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">-Pilih Jenis Kelamin-</label>
+                    <label class="form-label">Diagnosa</label>
+                    <input type="text" class="form-control" name="diagnosa">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tanggal Periksa</label>
+                    <input type="date" class="form-control" name="tanggal_periksa">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Jam Periksa</label>
+                    <input type="clock" class="form-control" name="jam_periksa">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">-Pilih Status-</label>
                     <br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="jk" id="inlineRadio1" value="laki-laki">
-                        <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
+                        <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="stabil">
+                        <label class="form-check-label" for="inlineRadio1">Stabil</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="jk" id="inlineRadio2" value="Perempuan">
-                        <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                        <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="kritis">
+                        <label class="form-check-label" for="inlineRadio2">Kritis</label>
                       </div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="tanggal_lahir">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Handphone</label>
-                    <input type="text" class="form-control" name="hp">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Alamat Pasien</label>
-                    <input type="text" class="form-control" name="alamat_pasien">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="membaik">
+                        <label class="form-check-label" for="inlineRadio2">Membaik</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="memburuk">
+                        <label class="form-check-label" for="inlineRadio2">Memburuk</label>
+                      </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>

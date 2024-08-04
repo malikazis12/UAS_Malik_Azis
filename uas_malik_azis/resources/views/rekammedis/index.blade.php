@@ -70,9 +70,9 @@
                     <tr>
                         <th>No</th>
                         <th>No Pasien</th>
-                        <th>Nama Pasien</th>
-                        <th>Tanggal Lahir</th>
-                        <th>Alamat</th>
+                        <th>Keluhan</th>
+                        <th>Diagnosa</th>
+                        <th>Tanggal_Periksa</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -81,9 +81,9 @@
                         <tr>
                             <td>{{$nomor++}}</td>
                             <td>{{$item->no_pasien}}</td>
-                            <td>{{$item->nama_pasien}}</td>
-                            <td>{{$item->tanggal_lahir}}</td>
-                            <td>{{$item->alamat_pasien}}</td>
+                            <td>{{$item->keluhan}}</td>
+                            <td>{{$item->diagnosa}}</td>
+                            <td>{{$item->tanggal_periksa}}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                                     <i class="fa fa-eye"></i>
@@ -102,38 +102,29 @@
 
                                                 <tbody>
                                                         <tr>
-                                                            <td>Nomor BPJS</td>
-                                                            <th scope="row">{{$item->no_bpjs}}</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Nomor KTP</td>
-                                                            <th scope="row">{{$item->no_ktp}}</th>
-                                                        </tr>
-                                                        <tr>
                                                             <td>Nomor Pasien</td>
                                                             <th scope="row">{{$item->no_pasien}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Nama Pasien</td>
-                                                            <th scope="row">{{$item->nama_pasien}}</th>
+                                                            <td>Keluhan</td>
+                                                            <th scope="row">{{$item->keluhan}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Jenis Kelamin</td>
-                                                            <th scope="row">{{$item->jk}}</th>
+                                                            <td>Diagnosa</td>
+                                                            <th scope="row">{{$item->diagnosa}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Tanggal Lahir</td>
-                                                            <th scope="row">{{$item->tanggal_lahir}}</th>
+                                                            <td>Tanggal Periksa</td>
+                                                            <th scope="row">{{$item->tanggal_periksa}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Handphone</td>
-                                                            <th scope="row">{{$item->hp}}</th>
+                                                            <td>Jam Periksa</td>
+                                                            <th scope="row">{{$item->jam_periksa}}</th>
                                                         </tr>
                                                         <tr>
-                                                            <td>Alamat</td>
-                                                            <th scope="row">{{$item->alamat_pasien}}</th>
+                                                            <td>Status</td>
+                                                            <th scope="row">{{$item->status}}</th>
                                                         </tr>
-
 
                                                 </tbody>
                                             </table>

@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('no_pasien');
             $table->string('keluhan');
-            $table->date('diagnosa');
+            $table->string('diagnosa');
+            $table->date('tanggal_periksa');
             $table->string('jam_periksa');
-            $table->string('lama periksa');
+            $table->string('status');
             $table->timestamps();
         });
     }

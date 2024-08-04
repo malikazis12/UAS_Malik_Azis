@@ -35,3 +35,5 @@ Route::delete('/pasien/{id}', [PasienController::class, 'destroy']);
 
 //Data Rekam Medis
 Route::get('/rekammedis/', [RekamMedisController::class, 'index']);
+Route::get('/rekammedis/form/', [RekamMedisController::class, 'create']);
+Route::post('/rekammedis/store/', [RekamMedisController::class, 'store']);
