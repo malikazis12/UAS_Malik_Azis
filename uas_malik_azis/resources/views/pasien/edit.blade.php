@@ -29,7 +29,7 @@
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">No Pasien</label>
-                    <input type="text" readonly value="{{$pasien->no_pasien}}" class="form-control" name="no_pasien">
+                    <input type="text" value="{{$pasien->no_pasien}}" class="form-control" name="no_pasien">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nama Pasien</label>
@@ -37,11 +37,11 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Tanggal Lahir</label>
-                    <input type="text" readonly value="{{$pasien->tanggal_lahir}}" class="form-control" name="tanggal_lahir">
+                    <input type="text" value="{{$pasien->tanggal_lahir}}" class="form-control" name="tanggal_lahir">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Alamat</label>
-                    <input type="text" readonly value="{{$pasien->alamat}}" class="form-control" name="alamat">
+                    <input type="text" value="{{$pasien->alamat_pasien}}" class="form-control" name="alamat_pasien">
                 </div>
                 <button type="submit" class="btn btn-primary">Edit Data</button>
             </form>

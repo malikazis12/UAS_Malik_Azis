@@ -202,7 +202,7 @@
 
           <li class="nav-item">
             <a href="/petugas/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
+              <i class="nav-icon fas fa-user-nurse"></i>
               <p>
                 Petugas
               </p>
@@ -222,7 +222,7 @@
 
           <li class="nav-item">
             <a href="/rekammedis/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
+              <i class="nav-icon fas fa-stethoscope"></i>
               <p>
                 Rekam Medis
               </p>

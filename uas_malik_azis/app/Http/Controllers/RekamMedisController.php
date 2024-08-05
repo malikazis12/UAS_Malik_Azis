@@ -84,9 +84,6 @@ class RekamMedisController extends Controller
      */
     public function destroy(string $id)
     {
-        $rekammedis = Rekammedis::find($id);
-        $rekammedis->delete();
-
-        return redirect('/rekammedis/');
+        //
     }
 }
