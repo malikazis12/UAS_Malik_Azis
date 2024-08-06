@@ -70,6 +70,7 @@
                     <tr>
                         <th>No</th>
                         <th>No Pasien</th>
+                        <th>Nama Pasien</th>
                         <th>Keluhan</th>
                         <th>Diagnosa</th>
                         <th>Tanggal_Periksa</th>
@@ -80,14 +81,12 @@
                     @forelse ($rekammedis as $item)
                         <tr>
                             <td>{{$nomor++}}</td>
-                            <td>{{$item->no_pasien}}</td>
+                            <td>{{$item->pasiens->no_pasien}} </td>
+                            <td>{{$item->pasiens->nama_pasien}} </td>
                             <td>{{$item->keluhan}}</td>
                             <td>{{$item->diagnosa}}</td>
                             <td>{{$item->tanggal_periksa}}</td>
                             <td>
-                                <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
-                                    <i class="fa fa-eye"></i>
-                                </button>
 
                                 <!-- Modal Detail-->
                                 <div class="modal fade" id="detail{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

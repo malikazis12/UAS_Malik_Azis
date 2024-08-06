@@ -42,7 +42,6 @@ class PasienController extends Controller
         $pasien->tanggal_lahir = $request->tanggal_lahir;
         $pasien->hp = $request->hp;
         $pasien->alamat_pasien = $request->alamat_pasien;
-        $pasien->password = bcrypt($request->password);
         $pasien->save();
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Rekammedis;
+use App\Models\Pasien;
 
 class RekamMedisController extends Controller
 {
@@ -22,8 +23,8 @@ class RekamMedisController extends Controller
      */
     public function create()
     {
-        $rekammedis = RekamMedis::all();
-        return view('rekammedis.form',compact('rekammedis'));
+        $pasien = Pasien::all();
+        return view('rekammedis.form',compact('pasien'));
     }
 
             /**
@@ -33,7 +34,8 @@ class RekamMedisController extends Controller
     {
 
         $rekammedis = new Rekammedis;
-        $rekammedis->no_pasien = $request->no_pasien;
+        $rekammedis->pasiens_id = $request->no_pasien;
+        $rekammedis->pasiens_id = $request->nama_pasien;
         $rekammedis->keluhan = $request->keluhan;
         $rekammedis->diagnosa = $request->diagnosa;
         $rekammedis->tanggal_periksa = $request->tanggal_periksa;

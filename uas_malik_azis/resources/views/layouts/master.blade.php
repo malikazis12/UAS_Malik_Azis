@@ -210,21 +210,20 @@
           </li>
 
           <li class="nav-item">
+            <a href="/rekammedis/" class="nav-link">
+              <i class="nav-icon fas fa-stethoscope"></i>
+              <p>
+                Rekam Medis
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="/pasien/" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Pasien
 
-              </p>
-            </a>
-          </li>
-
-
-          <li class="nav-item">
-            <a href="/rekammedis/" class="nav-link">
-              <i class="nav-icon fas fa-stethoscope"></i>
-              <p>
-                Rekam Medis
               </p>
             </a>
           </li>

@@ -27,8 +27,22 @@
             <form method="post" action="/rekammedis/store/" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">Nomor Pasien</label>
-                    <input type="text" class="form-control" name="no_pasien">
+                    <label class="form-label">-Pilih Nomor Pasien-</label>
+                    <select name="no_pasien" class="form-control" id="">
+                        <option value="">-Pilih Jurusan-</option>
+                        @foreach ($pasien as $item)
+                            <option value="{{ $item->id }}">{{ $item->no_pasien }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">-Nama Pasien-</label>
+                    <select name="nama_pasien" class="form-control" id="">
+                        <option value="">-Pilih Nama Pasien-</option>
+                        @foreach ($pasien as $item)
+                            <option value="{{ $item->id }}">{{ $item->nama_pasien }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Keluhan</label>

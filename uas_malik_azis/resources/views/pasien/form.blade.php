@@ -66,10 +66,6 @@
                     <label class="form-label">Alamat Pasien</label>
                     <input type="text" class="form-control" name="alamat_pasien">
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
         </div>
