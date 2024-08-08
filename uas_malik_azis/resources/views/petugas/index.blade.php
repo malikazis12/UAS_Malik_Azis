@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data Pasien')
-@section('judul','Data Pasien')
+@section('title','Data Petugas')
+@section('judul','Data Petugas')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active">Data Pasien</li>
+    <li class="breadcrumb-item active">Data Petugas</li>
   </ol>
 @endsection
 
@@ -53,7 +53,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-        <a href="/petugas/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+        <a href="/petugas/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data Petugas</a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -85,9 +85,6 @@
                             <td>{{$item->alamat}}</td>
                             <td>{{$item->hp}}</td>
                             <td>
-                                <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
-                                    <i class="fa fa-eye"></i>
-                                </button>
 
                                 <!-- Modal Detail-->
                                 <div class="modal fade" id="detail{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -129,7 +126,7 @@
                                     </div>
                                     </div>
                                 </div>
-                                <a href="/petugas/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
+                                <a href="/petugas/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pen-alt"></i></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                     <i class="fa fa-trash"></i>

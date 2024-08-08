@@ -53,7 +53,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-        <a href="/rekammedis/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+            <a href="/rekammedis/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Rekam Medis</a>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -135,11 +135,12 @@
                                     </div>
                                     </div>
                                 </div>
-                                <a href="/rekammedis/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
+                                <a href="/rekammedis/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pen-alt"></i></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                     <i class="fa fa-trash"></i>
                                 </button>
+
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="hapus{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -150,7 +151,7 @@
                                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                        Yakin Ingin Menghapus Data Jurusan <b>{{$item->mahasiswa}}</b>?
+                                        Yakin Ingin Menghapus Data Rekam Medis <b>{{$item->nama_pasien}}</b>?
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

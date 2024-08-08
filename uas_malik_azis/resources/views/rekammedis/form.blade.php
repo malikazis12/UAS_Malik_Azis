@@ -1,11 +1,11 @@
 @extends('layouts.master')
-@section('title','Tambah Data Pasien')
-@section('judul','Tambah Data Pasien')
+@section('title','Tambah Data Rekam Medis')
+@section('judul','Tambah Data Rekam Medis')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Data Pasien</a></li>
-        <li class="breadcrumb-item active">Tambah Data Pasien</li>
+        <li class="breadcrumb-item"><a href="#">Data Rekam Medis</a></li>
+        <li class="breadcrumb-item active">Tambah Data Rekam Medis</li>
     </ol>
 @endsection
 
