@@ -45,6 +45,15 @@
                     </select>
                 </div>
                 <div class="mb-3">
+                    <label class="form-label">-Nama Petugas-</label>
+                    <select name="nama_petugas" class="form-control" id="">
+                        <option value="">-Pilih Nama Petugas-</option>
+                        @foreach ($petugas as $item)
+                            <option value="{{ $item->id }}">{{ $item->nama_petugas }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label class="form-label">Keluhan</label>
                     <input type="text" class="form-control" name="keluhan">
                 </div>

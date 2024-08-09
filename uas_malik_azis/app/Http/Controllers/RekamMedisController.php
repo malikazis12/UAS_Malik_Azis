@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Rekammedis;
 use App\Models\Pasien;
+use App\Models\Petugas;
 
 class RekamMedisController extends Controller
 {
@@ -24,7 +25,8 @@ class RekamMedisController extends Controller
     public function create()
     {
         $pasien = Pasien::all();
-        return view('rekammedis.form',compact('pasien'));
+        $petugas = Petugas::all();
+        return view('rekammedis.form',compact('pasien','petugas'));
     }
 
             /**
@@ -36,6 +38,7 @@ class RekamMedisController extends Controller
         $rekammedis = new Rekammedis;
         $rekammedis->pasiens_id = $request->no_pasien;
         $rekammedis->pasiens_id = $request->nama_pasien;
+        $rekammedis->petugas_id = $request->nama_petugas;
         $rekammedis->keluhan = $request->keluhan;
         $rekammedis->diagnosa = $request->diagnosa;
         $rekammedis->tanggal_periksa = $request->tanggal_periksa;

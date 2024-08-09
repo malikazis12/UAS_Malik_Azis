@@ -13,5 +13,9 @@ class Rekammedis extends Model
     {
         return $this->hasOne(Pasien::class, 'id', 'pasiens_id');
     }
+        public function petugas(): HasOne
+    {
+        return $this->hasOne(Petugas::class, 'id', 'petugas_id');
+    }
 
 }

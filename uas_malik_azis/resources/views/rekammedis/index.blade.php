@@ -71,6 +71,7 @@
                         <th>No</th>
                         <th>No Pasien</th>
                         <th>Nama Pasien</th>
+                        <th>Nama Petugas</th>
                         <th>Keluhan</th>
                         <th>Diagnosa</th>
                         <th>Tanggal_Periksa</th>
@@ -83,6 +84,7 @@
                             <td>{{$nomor++}}</td>
                             <td>{{$item->pasiens->no_pasien}} </td>
                             <td>{{$item->pasiens->nama_pasien}} </td>
+                            <td>{{$item->petugas->nama_petugas}} </td>
                             <td>{{$item->keluhan}}</td>
                             <td>{{$item->diagnosa}}</td>
                             <td>{{$item->tanggal_periksa}}</td>

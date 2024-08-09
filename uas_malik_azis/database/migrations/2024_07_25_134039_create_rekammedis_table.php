@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('rekammedis', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('pasiens_id');
+            $table->bigInteger('petugas_id');
             $table->string('keluhan');
             $table->string('diagnosa');
             $table->date('tanggal_periksa');
