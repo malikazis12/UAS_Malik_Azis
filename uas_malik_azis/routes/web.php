@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\RekamMedisController;
 use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,7 @@ use App\Http\Controllers\PetugasController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Data Pasien
 Route::get('/pasien/', [PasienController::class, 'index']);
@@ -49,3 +50,5 @@ Route::post('/petugas/store/', [PetugasController::class, 'store']);
 Route::get('/petugas/edit/{id}', [PetugasController::class, 'edit']);
 Route::put('/petugas/{id}', [PetugasController::class, 'update']);
 Route::delete('/petugas/{id}', [PetugasController::class, 'destroy']);
+
+
