@@ -33,7 +33,11 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nama Pasien</label>
-                    <input type="text" value="{{$rekammedis->keluhan}}" class="form-control" name="keluhan">
+                    <input type="text" value="{{$rekammedis->nama_pasien}}" class="form-control" name="nama_pasien">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nama Petugas</label>
+                    <input type="text" value="{{$rekammedis->nama_petugas}}" class="form-control" name="nama_petugas">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Tanggal Lahir</label>

@@ -27,6 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 //Data Pasien
 Route::get('/pasien/', [PasienController::class, 'index']);
 Route::get('/pasien/form/', [PasienController::class, 'create']);

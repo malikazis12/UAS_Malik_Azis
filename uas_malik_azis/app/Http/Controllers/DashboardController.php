@@ -14,6 +14,6 @@ class DashboardController extends Controller
     {
         $nomor = 1;
         $dashboard = Dashboard::all();
-        return view('dashboard.index',compact('nomor','dashboard'));
+        return view('dashboard_admin.dashboard',compact('nomor','dashboard'));
     }
 }
