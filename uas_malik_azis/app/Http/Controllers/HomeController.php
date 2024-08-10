@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pasien;
+use App\Models\Rekammedis;
+use App\Models\Petugas;
 
 class HomeController extends Controller
 {
@@ -23,7 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $pasien = Pasien::count();
+        $petugas = Petugas::count();
+        $rekammedis = RekamMedis::count();
+
+        return view('home',compact('pasien','petugas','rekammedis'));
     }
 
 }
